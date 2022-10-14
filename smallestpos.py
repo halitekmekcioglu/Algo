@@ -1,5 +1,11 @@
 # you can write to stdout for debugging purposes, e.g.
 # print("this is a debug message")
+
+
+"""
+returns the smallest positive integer (greater than 0) that does not occur in a python
+
+"""
 A = [-10, -100, 12, 231, 414124, 2]
 
 
@@ -28,3 +34,15 @@ def solution(A):
 
 
 print(solution(A))
+
+
+# another effective solution
+
+# def minpositive(arr):
+#    if 1 not in arr: # protection from error if ( max(arr) < 0 )
+#        return 1
+#    else:
+#        maxArr = max(arr) # find max element in 'arr'
+#        c1 = set(range(2, maxArr+2)) # create array from 2 to max
+#        c2 = c1 - set(arr) # find all positive elements outside the array
+#        return min(c2)
